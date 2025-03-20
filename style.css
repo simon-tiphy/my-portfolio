@@ -30,7 +30,7 @@ body.light-theme {
 /* Header */
 header {
   background: #000;
-  padding: 20px 0;
+  padding: 30px 0;
   position: fixed;
   width: 100%;
   top: 0;
@@ -58,6 +58,7 @@ body.light-theme .logo {
 /* Navigation Menu */
 nav {
   /* Desktop navigation is visible */
+  display: block;
 
 }
 nav ul {
@@ -168,6 +169,7 @@ body.light-theme .theme-toggle {
 #hero p {
   font-size: 1.2rem;
   margin-bottom: 30px;
+  color: #fff;
 }
 .btn {
   display: inline-block;
