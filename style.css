@@ -152,6 +152,7 @@ body.light-theme .theme-toggle {
   background: url('https://img.freepik.com/free-vector/abstract-black-lines-geometric-background_677411-2748.jpg?semt=ais_hybrid') no-repeat center center/cover;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 0 20px;
@@ -186,6 +187,54 @@ body.light-theme .theme-toggle {
   background: #b22222; /* Red */
   color: #fff;
 }
+
+/* --- Typewriter Effect for h1 --- */
+.typewriter h1 {
+  overflow: hidden;                   /* Hide the overflowing text */
+  white-space: nowrap;                /* Prevent text wrap */
+  border-right: 0.15em solid #b22222;  /* Cursor effect */
+  width: 0;                           /* Start with no visible text */
+  animation: typing 4s steps(40, end) forwards,
+             blink-caret 0.75s step-end infinite;
+}
+
+/* Keyframes for typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Keyframes for cursor blink */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #b22222; }
+}
+
+/* Fade out the typewriter text to repeat the effect */
+.typewriter {
+  animation: fadeOut 2s 6s infinite;
+}
+
+@keyframes fadeOut {
+  0%, 90% { opacity: 1; }
+  95%, 100% { opacity: 0; }
+}
+
+/* Responsive adjustments for mobile view */
+@media (max-width: 600px) {
+  #hero h1 {
+    font-size: 2.5rem;
+  }
+  #hero p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+  .btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}
+
 
 /* Sections */
 section {
