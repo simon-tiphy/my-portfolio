@@ -148,6 +148,7 @@ body.light-theme .theme-toggle {
 }
 
 
+
 /* Hero Section */
 #hero {
   background: url('https://img.freepik.com/free-vector/abstract-black-lines-geometric-background_677411-2748.jpg?semt=ais_hybrid') no-repeat center center/cover;
@@ -158,20 +159,37 @@ body.light-theme .theme-toggle {
   padding: 0 20px;
   margin-top: 80px; /* Offset for fixed header */
 }
+
 .hero-container {
   max-width: 800px;
   margin: auto;
 }
+
+/* Updated Hero Heading with Gradient and Animation */
 #hero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
-  color: #b22222; /* Red accent */
+  
+  /* Gradient text effect */
+  background: linear-gradient(45deg, #b22222, #b8860b);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* Fade-in & slide-up animation */
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInSlide 1.5s ease-out forwards, gradientMove 3s ease-in-out infinite;
 }
+
+/* Hero paragraph styling */
 #hero p {
   font-size: 1.2rem;
   margin-bottom: 30px;
   color: #fff;
 }
+
+/* Button styling */
 .btn {
   display: inline-block;
   padding: 10px 25px;
@@ -183,9 +201,31 @@ body.light-theme .theme-toggle {
   cursor: pointer;
   transition: background 0.3s;
 }
+
 .btn:hover {
   background: #b22222; /* Red */
   color: #fff;
+}
+
+/* Keyframes for fade-in and slide-up */
+@keyframes fadeInSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Keyframes for gradient movement */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 
