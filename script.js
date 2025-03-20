@@ -1,6 +1,3 @@
-
-
-
 // Theme Toggle with Icon Change
 const themeToggle = document.getElementById('themeToggle');
 const themeIcon = themeToggle.querySelector('i');
