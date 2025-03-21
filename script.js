@@ -50,3 +50,30 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   // Reset the form
   this.reset();
 });
+
+
+
+// Select the About section elements
+const aboutContainer = document.querySelector('.about-container');
+const aboutContent = document.querySelector('.about-content');
+
+// Create an IntersectionObserver to watch when the About section is in view
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Add the animation classes when in view
+        aboutContainer.classList.add('animate');
+        aboutContent.classList.add('animate');
+      } else {
+        // Remove the classes so that the animation resets
+        aboutContainer.classList.remove('animate');
+        aboutContent.classList.remove('animate');
+      }
+    });
+  },
+  { threshold: 0.5 } // Trigger when 50% of the element is visible
+);
+
+// Start observing the container
+observer.observe(aboutContainer);
