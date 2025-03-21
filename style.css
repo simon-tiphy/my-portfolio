@@ -461,11 +461,22 @@ body.light-theme footer {
 .contact-info {
   margin: 10px 0;
   font-size: 0.95rem;
+
 }
 .contact-info p {
   margin: 5px 0;
   display: inline-block;
   margin-right: 15px;
+  color: #b8860b;
+}
+
+.contact-info a {
+  color: #b8860b;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.contact-info a:hover {
+  color: #b22222;
 }
 
 /* Social Links */
